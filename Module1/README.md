@@ -20,8 +20,8 @@
 
 {Make a list of websites that you found helpful in this project}
 
-- [Web Site Name](http://url.link.goes.here)
-- [Web Site Name](http://url.link.goes.here)
+- [Web Site Name](https://www.linkedin.com/pulse/6-steps-build-app-python-complete-guide-dhiman-bhattacharyya/)
+- [Web Site Name](https://www.reddit.com/r/Python/comments/qvvdgp/i_am_an_intermediate_in_python_and_now_i_want_to/)
 
 # Future Work
 

@@ -7,6 +7,19 @@ from kivy.uix.dropdown import DropDown
 from kivy.uix.image import Image
 
 class MealCalorieCalculatorApp(App):
+    BoxLayout:
+    orientation: 'vertical'
+    spacing: 10
+    padding: 10
+
+    Image:
+        source: 'cals.jpg'
+        size_hint_y: None
+        height: 100
+
+    Label:
+        text: 'Meal & Exercise Calorie Calculator'
+        font_size: '24sp'
     def build(self):
         self.meal_totals = {'breakfast': 0, 'lunch': 0, 'dinner': 0, 'snack': 0}
         self.exercise_total = 0
