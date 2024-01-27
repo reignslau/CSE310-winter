@@ -56,6 +56,8 @@ class MealCalorieCalculatorApp(App):
         layout.add_widget(exercise_button)
         layout.add_widget(total_label)
         layout.add_widget(self.total_display)
+        self.error_label = Label(text='', color=(1, 0, 0, 1), font_size='16sp') 
+        layout.add_widget(self.error_label)
 
         return layout
 
@@ -68,6 +70,7 @@ class MealCalorieCalculatorApp(App):
 
             self.update_total_display()
             self.clear_input_fields()
+            self.error_label.text = '' 
         except ValueError:
             self.total_display.text = 'Invalid input. Please enter numbers.'
 

@@ -9,6 +9,7 @@ from kivy.uix.image import Image
 class MealCalorieCalculatorApp(App):
     def build(self):
         self.meal_totals = {'breakfast': 0, 'lunch': 0, 'dinner': 0, 'snack': 0}
+        self.selected_meal = 'breakfast'
         self.exercise_total = 0
 
         layout = BoxLayout(orientation='vertical', spacing=10, padding=10)
@@ -42,10 +43,10 @@ class MealCalorieCalculatorApp(App):
 
         exercise_button = Button(text='Add Exercise', on_press=self.add_exercise, font_size='20sp')
 
-        breakfast_label = Label(text='Breakfast Total: 0 kcal', font_size='18sp')
-        lunch_label = Label(text='Lunch Total: 0 kcal', font_size='18sp')
-        dinner_label = Label(text='Dinner Total: 0 kcal', font_size='18sp')
-        snack_label = Label(text='Snack Total: 0 kcal', font_size='18sp')
+        self.breakfast_label = Label(text='Breakfast Total: 0 kcal', font_size='18sp')
+        self.lunch_label = Label(text='Lunch Total: 0 kcal', font_size='18sp')
+        self.dinner_label = Label(text='Dinner Total: 0 kcal', font_size='18sp')
+        self.snack_label = Label(text='Snack Total: 0 kcal', font_size='18sp')
 
         total_label = Label(text='Total Calories:', font_size='24sp')
         self.total_display = Label(text=str(self.calculate_total()), font_size='24sp')
@@ -63,10 +64,10 @@ class MealCalorieCalculatorApp(App):
         layout.add_widget(exercise_label)
         layout.add_widget(self.exercise_input)
         layout.add_widget(exercise_button)
-        layout.add_widget(breakfast_label)
-        layout.add_widget(lunch_label)
-        layout.add_widget(dinner_label)
-        layout.add_widget(snack_label)
+        layout.add_widget(self.breakfast_label)
+        layout.add_widget(self.lunch_label)
+        layout.add_widget(self.dinner_label)
+        layout.add_widget(self.snack_label)
         layout.add_widget(total_label)
         layout.add_widget(self.total_display)
 
@@ -75,7 +76,7 @@ class MealCalorieCalculatorApp(App):
     def add_food(self, instance):
         try:
             calories = float(self.calorie_input.text)
-            selected_meal = self.meal_dropdown.button.text.lower()
+            selected_meal = self.meal_dropdown.children[0]
 
             self.meal_totals[selected_meal] += calories
 
@@ -87,13 +88,12 @@ class MealCalorieCalculatorApp(App):
 
     def delete_food(self, instance):
         try:
-            selected_meal = self.meal_dropdown.button.text.lower()
+            if hasattr(self, 'selected_meal') and self.selected_meal in self.meal_totals:
 
-            if self.meal_totals[selected_meal] > 0:
-                self.meal_totals[selected_meal] -= 1
-
-                self.update_meal_labels()
-                self.update_total_display()
+                if self.meal_totals[self.selected_meal] > 0:
+                    self.meal_totals[self.selected_meal] -= 1
+                    self.update_meal_labels()
+                    self.update_total_display()
         except ValueError:
             self.total_display.text = 'Error deleting food.'
 
@@ -112,10 +112,10 @@ class MealCalorieCalculatorApp(App):
         return sum(self.meal_totals.values()) - self.exercise_total
 
     def update_meal_labels(self):
-        self.root.children[17].text = f'Breakfast Total: {self.meal_totals["breakfast"]} kcal'
-        self.root.children[18].text = f'Lunch Total: {self.meal_totals["lunch"]} kcal'
-        self.root.children[19].text = f'Dinner Total: {self.meal_totals["dinner"]} kcal'
-        self.root.children[20].text = f'Snack Total: {self.meal_totals["snack"]} kcal'
+        self.breakfast_label.text = f'Breakfast Total: {self.meal_totals["breakfast"]} kcal'
+        self.lunch_label.text = f'Lunch Total: {self.meal_totals["lunch"]} kcal'
+        self.dinner_label.text = f'Dinner Total: {self.meal_totals["dinner"]} kcal'
+        self.snack_label.text = f'Snack Total: {self.meal_totals["snack"]} kcal'
 
     def update_total_display(self):
         self.total_display.text = str(self.calculate_total())
