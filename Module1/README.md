@@ -13,9 +13,9 @@
 # Development Environment
 
 {Describe the tools that you used to develop the software}
-
+One tools I use is Chat.GPT, any time I have error I can use it to help me why and what should I change in my program. But sometime it doesn't work, like this time it also can't find out why my program doesn't run the ways it suppost be. 
 {Describe the programming language that you used and any libraries.}
-
+I use python to try to make a app, and "Kivy" have many thing that can help me to build the app. 
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
@@ -28,5 +28,8 @@
 {Make a list of things that you need to fix, improve, and add in the future.}
 
 - Item 1
+Spend more time to watch or learn how other programer work, and find more interest project that work on.
 - Item 2
+Use less help for others and spend more time to understand myself and fix the code.
 - Item 3
+I want to learn a new program language so I want to spend some time to do some search for that. And start to learn that in my free time. 
