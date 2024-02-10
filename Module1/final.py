@@ -9,8 +9,8 @@ from kivy.uix.image import Image
 class MealCalorieCalculatorApp(App):
     def build(self):
         self.meal_totals = {'breakfast': 0, 'lunch': 0, 'dinner': 0, 'snack': 0}
-        self.selected_meal = 'breakfast'
         self.exercise_total = 0
+        self.calories = 0
 
         layout = BoxLayout(orientation='vertical', spacing=10, padding=10)
 
@@ -76,7 +76,7 @@ class MealCalorieCalculatorApp(App):
     def add_food(self, instance):
         try:
             calories = float(self.calorie_input.text)
-            selected_meal = self.meal_dropdown.children[0]
+            selected_meal = self.meal_dropdown.selected_option.text.lower()
 
             self.meal_totals[selected_meal] += calories
 
