@@ -8,7 +8,7 @@
 
 {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code.}
 
-[Software Demo Video](https://youtu.be/KwQZhfysfJY)
+[Software Demo Video](https://youtu.be/N5jGwX0d8ZI)
 
 # Development Environment
 
@@ -20,8 +20,8 @@ I use python to try to make a app, and "Kivy" have many thing that can help me t
 
 {Make a list of websites that you found helpful in this project}
 
-- [Web Site Name](https://www.linkedin.com/pulse/6-steps-build-app-python-complete-guide-dhiman-bhattacharyya/)
-- [Web Site Name](https://www.reddit.com/r/Python/comments/qvvdgp/i_am_an_intermediate_in_python_and_now_i_want_to/)
+- [Web Site Name](https://xgboost.readthedocs.io/en/latest/)
+- [Web Site Name](https://machinelearningmastery.com/develop-first-xgboost-model-python-scikit-learn/)
 
 # Future Work
 
@@ -32,4 +32,4 @@ Spend more time to watch or learn how other programer work, and find more intere
 - Item 2
 Use less help for others and spend more time to understand myself and fix the code.
 - Item 3
-I want to learn a new program language so I want to spend some time to do some search for that. And start to learn that in my free time. 
+Learn different model for it, and understand each of them. Then find out a better model for this data. 
