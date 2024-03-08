@@ -1,3 +1,4 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "livePreview.defaultPreviewPath": "/Module4/Digital Clock/1/MyClockDisplay.html"
 }
