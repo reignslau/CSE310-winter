@@ -10,7 +10,7 @@ The software I created is a simple digital clock that displays the current time 
 
 {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code.}
 
-[Software Demo Video]()
+[Software Demo Video](https://youtu.be/552XdOETPVc)
 
 # Development Environment
 
@@ -25,8 +25,8 @@ JavaScript: Employed to fetch the current time, format it, and update the clock 
 
 {Make a list of websites that you found helpful in this project}
 
-- [Web Site Name]()
-- [Web Site Name]()
+- [Web Site Name](https://www.jschallenger.com/?source=post_page-----204ad241fb40--------------------------------)
+- [Web Site Name](https://exercism.org/tracks/javascript?source=post_page-----204ad241fb40--------------------------------)
 
 # Future Work
 
