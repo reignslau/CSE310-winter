@@ -10,7 +10,7 @@ My purpose for writing this software was to gain hands-on experience in machine 
 
 {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code.}
 
-[Software Demo Video]()
+[Software Demo Video](https://youtu.be/5q-vv66seqg)
 
 # Development Environment
 
@@ -21,7 +21,7 @@ My purpose for writing this software was to gain hands-on experience in machine 
 {Make a list of websites that you found helpful in this project}
 
 - [Web Site Name](https://www.datacamp.com/blog/r-project-ideas)
-- [Web Site Name]()
+- [Web Site Name](https://www.r-project.org/about.html)
 
 # Future Work
 
