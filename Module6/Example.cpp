@@ -1,24 +1,24 @@
 #include <iostream>
 
-using namespace std;
+// Function to calculate factorial recursively
+unsigned long long factorial(int n) {
+    if (n == 0)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
 
 int main() {
-    // Declare variables to store input numbers and sum
-    int num1, num2, sum;
+    int num;
+    std::cout << "Enter a non-negative integer to calculate its factorial: ";
+    std::cin >> num;
 
-    // Prompt user to enter the first number
-    cout << "Enter the first number: ";
-    cin >> num1;
-
-    // Prompt user to enter the second number
-    cout << "Enter the second number: ";
-    cin >> num2;
-
-    // Calculate the sum
-    sum = num1 + num2;
-
-    // Display the sum
-    cout << "The sum of " << num1 << " and " << num2 << " is: " << sum << endl;
+    if (num < 0) {
+        std::cout << "Factorial is not defined for negative numbers." << std::endl;
+    } else {
+        unsigned long long fact = factorial(num);
+        std::cout << "Factorial of " << num << " is: " << fact << std::endl;
+    }
 
     return 0;
 }
